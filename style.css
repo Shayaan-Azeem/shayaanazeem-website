@@ -147,35 +147,46 @@ body.dark-mode .copy-email:hover {
   border-bottom: 2px solid #f39c12;
 }
 
-
 /* Styling for the profile section */
 .profile-section {
-  display: flex; /* Use flexbox for layout */
-  align-items: left; /* Aligns items to the start of the container */
+  display: flex; /* Flex layout for desktop */
+  align-items: flex-start; /* Aligns items at the start of the container */
+  gap: 20px;
 }
 
+/* Banner-style image */
 .left-image {
-  width: 200px; /* Adjust width as needed */
-  height: auto; /* Keeps the aspect ratio */
-  margin-right: 20px; /* Space between image and text */
+  width: 100%; /* Full width of the container */
+  height: 200px; /* Banner height; adjust as needed */
+  object-fit: cover; /* Crop image to fit the banner dimensions */
   border-radius: 5px;
-  transition: transform 0.2s ease; /* Smooth transition for the transform property */
+  transition: transform 0.2s ease; /* Smooth transition for hover effect */
 }
 
-/* Scale up on hover */
+/* Scale down slightly on hover */
 .left-image:hover {
-  transform: scale(0.90); /* Scale up the image when hovered */
+  transform: scale(0.95); /* Scale down the image when hovered */
 }
 
-/* Scale down on active (pressed) */
-.left-image:active {
-  transform: scale(0.5); /* Scale down the image when pressed */
-}
-
-
-
+/* Text content styling */
 .text-content {
-  max-width: 600px; /* Limits the text width */
+  max-width: 600px; /* Limits text width on desktop */
+  margin-top: 20px; /* Space between banner and text on mobile */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column; /* Stack image above text */
+  }
+
+  .left-image {
+    height: 150px; /* Adjust height for mobile if needed */
+  }
+
+  .text-content {
+    text-align: center; /* Center text for a mobile-friendly layout */
+  }
 }
 
 /* Basic styling for the blog page */
@@ -279,4 +290,41 @@ nav a:hover {
   color: #555; /* Color specifically for the license text */
   font-size: 0.9em; /* Optional: font size for the license text */
   margin-top: 10px; /* Adjust margin for the license text */
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: left;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 20px;
+  color: #0070f3;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Add a line break after the third item */
+nav a:nth-child(3) {
+  margin-right: 0; /* Remove right margin for alignment */
+}
+
+nav a:nth-child(3)::after {
+  content: ""; /* Insert empty content */
+  display: block; /* Forces next items to wrap to a new line */
+}
+
+/* Footer styles */
+
+/* Mobile styles for footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
 }
