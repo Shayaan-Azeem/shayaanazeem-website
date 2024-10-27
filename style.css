@@ -156,9 +156,10 @@ body.dark-mode .copy-email:hover {
 
 /* Banner-style image */
 .left-image {
-  width: 100%; /* Full width of the container */
-  height: 200px; /* Banner height; adjust as needed */
-  object-fit: cover; /* Crop image to fit the banner dimensions */
+  width: 100%;
+  height: cover;
+  max-height: 300px; /* Maximum height constraint */
+  object-fit: cover;
   border-radius: 5px;
   transition: transform 0.2s ease; /* Smooth transition for hover effect */
 }
@@ -276,22 +277,41 @@ nav a:hover {
       margin-right: 10px; /* Adjust margin for smaller screens */
   }
 }
+/* Footer styles */
+.footer {
+  max-width: 800px; /* Maximum width constraint */
+  width: 100%; /* Full width up to the max-width */
+  margin: 0 auto; /* Center the footer container */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow footer items to wrap on smaller screens */
+  gap: 10px; /* Add spacing between items */
+  justify-content: center;
+}
 
 .footer p {
-  white-space: nowrap; /* Prevents line breaks */
   margin: 5px 0; /* Adjust margin for footer paragraphs */
+  white-space: normal; /* Allows line breaks within footer text */
 }
 
 .footer .email {
-  color: inherit; /* Use the default text color for the email */
+  color: inherit; /* Inherit default text color */
 }
 
 .footer .license {
-  color: #555; /* Color specifically for the license text */
+  color: #555;
   font-size: 0.9em; /* Optional: font size for the license text */
-  margin-top: 10px; /* Adjust margin for the license text */
+  margin-top: 10px;
 }
 
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+}
 /* Navigation styles */
 nav {
   display: flex;
@@ -320,11 +340,3 @@ nav a:nth-child(3)::after {
   display: block; /* Forces next items to wrap to a new line */
 }
 
-/* Footer styles */
-
-/* Mobile styles for footer */
-@media (max-width: 600px) {
-  .footer {
-    padding: 10px;
-  }
-}
