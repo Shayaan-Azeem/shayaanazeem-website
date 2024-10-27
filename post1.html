@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Summer in San Francisco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>life recently</h1>
+    <p>October 27, 2024</p>
+    
+    <!-- Blog Content Section -->
+    <div id="blog-content"></div>
+
+    <a href="blog.html">Back to Blog</a>
+  </div>
+
+  <!-- Include the marked.js library for Markdown support -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Markdown content for this specific blog post
+    const markdownContent = `
+    # my life laterly
+    _August 26, 2023_
+
+    Some **Markdown** content here. This can include lists, images, links, and any Markdown-supported format.
+    `;
+
+    // Render the Markdown content into HTML and inject it into the blog-content div
+    document.getElementById('blog-content').innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>

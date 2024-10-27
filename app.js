@@ -14,7 +14,7 @@ themeToggleBtn.addEventListener('click', function() {
 });
 
 // Array of words that will replace "high school student"
-const studentWords = ['a programmer', 'an engineer', 'a builder','a storyteller','a developer','a linkedin influencer'];
+const studentWords = ['a programmer', 'an engineer', 'a builder','a developer'];
 
 // Reference to the "dynamic-student" span in the HTML
 const dynamicStudent = document.getElementById('dynamic-student');
@@ -30,10 +30,7 @@ setInterval(changeStudentWord, 1500);
 
 
 // Array of words to cycle through for "computer science"
-const csOptions = ["computer science 👨🏻‍💻", "artificial intelligence 🧠", "software engineering 📱", "machine learning 🤖"];
-
-// Array of words to cycle through for "business"
-const businessOptions = ["business 💼", "entrepreneurship 🤝", "finance 💰", "economics 📈"];
+const csOptions = ["computer science 👨🏻‍💻", "artificial intelligence 🧠", "software engineering 📱", "machine learning 🤖", "business 💼", "finance 💰", "economics 📈"];
 
 // Initialize indexes for both
 let csIndex = 0;
@@ -43,19 +40,16 @@ let businessIndex = 0;
 function updateDynamicText() {
   // Get the elements by their IDs
   const csElement = document.getElementById('dynamic-cs');
-  const businessElement = document.getElementById('dynamic-business');
 
   // Update the text content with the next option in the array
   csElement.textContent = csOptions[csIndex];
-  businessElement.textContent = businessOptions[businessIndex];
 
   // Increment the indexes, loop back to the start if at the end of the array
   csIndex = (csIndex + 1) % csOptions.length;
-  businessIndex = (businessIndex + 1) % businessOptions.length;
 }
 
 // Call updateDynamicText every 2 seconds (2000 milliseconds)
-setInterval(updateDynamicText, 2000);
+setInterval(updateDynamicText, 1000);
 
 
 // Function to copy email to clipboard
@@ -71,4 +65,5 @@ document.getElementById('email-address').addEventListener('click', function() {
 
     // Alert to confirm the email was copied (can be replaced by more subtle notifications)
     alert('Email copied to clipboard!');
+
 });

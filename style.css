@@ -1,174 +1,282 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Light mode (default) */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f7f7f7; /* Light background */
-    color: #333; /* Dark text */
-    padding: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: justify; /* Justify the text */
-  }
-  
-  /* Dark mode */
-  body.dark-mode {
-    background-color: #000000; /* Dark background */
-    color: #f7f7f7; /* Light text */
-  }
-  
-  /* Heading */
-  h1 {
-    margin-top: 20px;
-    text-align: left; /* Align the heading to the left */
-    margin-bottom: 20px;
-  }
-  
-  /* Container for text */
-  .container {
-    max-width: 800px; /* Maximum width for text content */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  /* Paragraph styling */
-  p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-  }
-  
-  /* Links */
-  a {
-    color: #0070f3;
-    text-decoration: none;
-  }
-  
-  a {
-    color: #0070f3;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light mode (default) */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7; /* Light background */
+  color: #333; /* Dark text */
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left; /* Justify the text */
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #000000; /* Dark background */
+  color: #f7f7f7; /* Light text */
+}
+
+/* Container for text */
+.container {
+  max-width: 800px; /* Maximum width for text content */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  text-align: left; /* Center the content */
+}
+
+/* Heading */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left; /* Center the heading */
+}
+
+/* Paragraph styling */
+p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+/* Links */
+a {
+  color: #0070f3;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Links in dark mode */
 body.dark-mode a {
-    color: #f39c12; /* Dark mode link color */
+  color: #f39c12; /* Dark mode link color */
 }
 
-body.dark-mode a:hover {
-    text-decoration: underline;
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-  
-  /* Button styling */
-  button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 1em;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #005bb5;
-  }
-  
-  /* Dark mode button styling */
-  body.dark-mode button {
-    background-color: #f7f7f7; /* Light button in dark mode */
-    color: #333; /* Dark text for button in dark mode */
-  }
-  
-  body.dark-mode button:hover {
-    background-color: #ddd; /* Hover effect for button in dark mode */
-  }
-  
-  /* Specific styling for the intro line */
-  .intro-line {
-    font-size: 1.5rem; /* Larger font size for intro line */
-    font-weight: bold;
-  }
-  
-  /* Content paragraph spacing */
-  .content-paragraph {
-    margin-top: 15px;
-  }
-  
 
-  /* Underline the dynamic text */
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Dark mode button styling */
+body.dark-mode button {
+  background-color: #f7f7f7; /* Light button in dark mode */
+  color: #333; /* Dark text for button in dark mode */
+}
+
+body.dark-mode button:hover {
+  background-color: #ddd; /* Hover effect for button in dark mode */
+}
+
+/* Specific styling for the intro line */
+.intro-line {
+  font-size: 1.5rem; /* Larger font size for intro line */
+  font-weight: bold;
+}
+
+/* Content paragraph spacing */
+.content-paragraph {
+  margin-top: 15px;
+}
+
+/* Underline the dynamic text */
 #dynamic-cs, #dynamic-business {
-    text-decoration: underline;
-    transition: opacity 0.3s ease;
-  }
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
 
-
-  #dynamic-student {
-    font-weight: bold;
-    background-color: #0071f36c; /* Light mode highlight color */
-    padding: 2px 5px;
-    border-radius: 3px;
-    animation: highlight 1s ease-out;
-    color: rgb(0, 0, 0); /* Text color */
+#dynamic-student {
+  font-weight: bold;
+  background-color: #0071f36c; /* Light mode highlight color */
+  padding: 2px 5px;
+  border-radius: 3px;
+  animation: highlight 1s ease-out;
+  color: rgb(0, 0, 0); /* Text color */
 }
 
 /* Dynamic Student style in dark mode */
 body.dark-mode #dynamic-student {
-    background-color: #f39c12; /* Dark mode highlight color */
-    color: white; /* Change text color in dark mode */
+  background-color: #f39c12; /* Dark mode highlight color */
+  color: white; /* Change text color in dark mode */
 }
 
 /* Style for the email text */
 .copy-email {
-    cursor: pointer;
-    color: #000000; /* Original email color */
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Style for the email text in light mode */
+/* Hover effect for the email */
+
 .copy-email {
-    cursor: pointer;
-    color: #000000; /* Default email color in light mode */
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
+  color: #000000; /* Highlight in light mode */
 }
 
-/* Style for the email text in dark mode */
-body.dark-mode .copy-email {
-    color: #ffffff; /* Default email color in dark mode */
-}
-
-/* Hover effect for the email in light mode */
 .copy-email:hover {
-    color: #005bb5; /* Highlight in light mode */
-    border-bottom: 2px solid #005bb5;
+  color: #005bb5; /* Highlight in light mode */
+  border-bottom: 2px solid #005bb5;
+}
+
+/*  effect for the email in dark mode */
+body.dark-mode .copy-email {
+  color: #ffffff; /* Highlight in dark mode */
 }
 
 /* Hover effect for the email in dark mode */
 body.dark-mode .copy-email:hover {
-    color: #f39c12; /* Highlight in dark mode */
-    border-bottom: 2px solid #f39c12;
+  color: #f39c12; /* Highlight in dark mode */
+  border-bottom: 2px solid #f39c12;
 }
 
 
-  
-  .social-links {
-    text-align: center;         /* Center text inside social-links */
+/* Styling for the profile section */
+.profile-section {
+  display: flex; /* Use flexbox for layout */
+  align-items: left; /* Aligns items to the start of the container */
+}
+
+.left-image {
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Keeps the aspect ratio */
+  margin-right: 20px; /* Space between image and text */
+  border-radius: 5px;
+  transition: transform 0.2s ease; /* Smooth transition for the transform property */
+}
+
+/* Scale up on hover */
+.left-image:hover {
+  transform: scale(0.90); /* Scale up the image when hovered */
+}
+
+/* Scale down on active (pressed) */
+.left-image:active {
+  transform: scale(0.5); /* Scale down the image when pressed */
+}
+
+
+
+.text-content {
+  max-width: 600px; /* Limits the text width */
+}
+
+/* Basic styling for the blog page */
+.blog-list {
+  margin-top: 20px;
+}
+
+.blog-post {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.blog-post h2 {
+  font-size: 1.8em;
+}
+
+.blog-post a {
+  color: #005bb5;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.subscription-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.subscription-form button:hover {
+  background-color: #005bb5;
+}
+
+#subscribe-message {
+  color: green;
+  margin-top: 10px;
+}
+
+/* Navigation styles */
+nav {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: left; /* Center links */
+  text-align: left;
+  margin-bottom: 20px; /* Space below the nav */
+}
+
+nav a {
+  margin-right: 15px; /* Space between links */
+  color: #0070f3; /* Link color */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile responsiveness (optional) */
+@media (max-width: 600px) {
+  nav a {
+      margin-right: 10px; /* Adjust margin for smaller screens */
   }
-  
-  .social-links a {
-    margin: 0 10px;            /* Add margin between links */
-    text-decoration: none;      /* Remove underline from links */
-  }
-  
+}
+
+.footer p {
+  white-space: nowrap; /* Prevents line breaks */
+  margin: 5px 0; /* Adjust margin for footer paragraphs */
+}
+
+.footer .email {
+  color: inherit; /* Use the default text color for the email */
+}
+
+.footer .license {
+  color: #555; /* Color specifically for the license text */
+  font-size: 0.9em; /* Optional: font size for the license text */
+  margin-top: 10px; /* Adjust margin for the license text */
+}
