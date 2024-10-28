@@ -186,7 +186,11 @@ body.dark-mode .copy-email:hover {
   }
 
   .text-content {
-    text-align: center; /* Center text for a mobile-friendly layout */
+    text-align: left; /* Keep main text left-aligned */
+  }
+
+  .text-content h1 {
+    text-align: center; /* Center only the heading */
   }
 }
 
